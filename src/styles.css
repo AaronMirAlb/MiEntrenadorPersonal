@@ -1,0 +1,156 @@
+/* Ajustes globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evitar cualquier tipo de scroll */
+    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Encabezado */
+.header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Tamaño más pequeño */
+    font-weight: bold;
+}
+
+/* Imagen colgante con movimiento más pronunciado y tamaño reducido */
+.swinging-image {
+    animation: swing 3s ease-in-out infinite; /* Movimiento más lento */
+    transform-origin: top center;
+    display: block;
+    width: 70px; /* Tamaño reducido */
+    height: auto;
+}
+
+/* Navegación */
+.navbar {
+    background-color: rgba(52, 73, 94, 0.3);
+    padding: 5px 10px;
+    border-radius: 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: rgba(52, 73, 94, 0.6);
+}
+
+.navbar-nav .nav-link {
+    color: #ecf0f1;
+    font-size: 0.8em; /* Más pequeña */
+    font-weight: 500;
+    padding: 5px 8px; /* Padding reducido */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #1abc9c;
+    border-radius: 3px;
+    color: white;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación para la imagen colgante con mayor amplitud */
+@keyframes swing {
+    0% {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(20deg); /* Más inclinación */
+    }
+    50% {
+        transform: rotateX(0deg);
+    }
+    75% {
+        transform: rotateX(-20deg); /* Más inclinación */
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* Tabla de ejercicios */
+.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em; /* Reducir tamaño de texto */
+    table-layout: fixed; /* Columnas de ancho fijo */
+}
+
+.workout-table th, .workout-table td {
+    border: 1px solid #ddd;
+    padding: 4px 8px; /* Reducir padding */
+    text-align: center;
+    width: 25%; /* Todas las columnas tienen el mismo ancho */
+}
+
+.workout-table th {
+    background-color: #34495e; /* Fondo oscuro */
+    color: #000; /* Texto en negro para mayor legibilidad */
+}
+
+.workout-table td a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.workout-table td a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes generales */
+.container-fluid {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Contenedor ajustado para que todo quepa sin scroll */
+.container {
+    height: calc(100vh - 60px); /* Ajuste para que todo quepa sin scroll, 60px incluye el header y footer */
+    overflow: hidden; /* Sin scroll interno */
+    box-sizing: border-box;
+}
+
+.container h2 {
+    font-size: 1.2em; /* Reducir tamaño de título */
+    margin: 5px 0; /* Reducir margen superior e inferior */
+}

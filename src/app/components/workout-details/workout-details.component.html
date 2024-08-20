@@ -1,0 +1,156 @@
+  <!-- <div class="container" *ngIf="workoutDetails">
+    <h2>{{ workoutDetails.name }} de {{ workoutDetails.user }}</h2>
+    <div *ngFor="let detail of workoutDetails.workouts">
+      <h3>Workout Details</h3>
+      <p><strong>Series:</strong> {{ detail.series }}</p>
+      <p><strong>Repeticiones:</strong> {{ detail.repeticiones }}</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Series</th>
+            <th>Ejercicio</th>
+            <th>Repeticiones</th>
+            <th>Descanso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exercise of detail.exerciseDetails">
+            <td>{{exercise.exercise}}</td>
+            <td><a [href]="exercise.exercise.link" target="_blank">{{exercise.exercise.name}}</a></td>
+            <td>{{exercise.repeticiones}}</td>
+            <td>{{exercise.rest}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+
+  <!-- <div class="container" *ngIf="workoutDetails">
+    <h2>{{ workoutDetails.name }} de {{ workoutDetails.user }}</h2>
+    <div *ngFor="let detail of workoutDetails.workouts">
+      <table class="workout-table">
+        <thead>
+          <tr>
+            <th colspan="2">Ejercicio 1</th>
+            <th>Iniciar stopper</th>
+            <th>Ejercicio 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exercise of detail.exerciseDetails">
+            <td>{{exercise.series}}x{{exercise.repeticiones}}</td>
+            <td>
+              <a [href]="exercise.ejercicio1.link" target="_blank">{{exercise.ejercicio1.name}}</a>
+            </td>
+            <td class="rest-time">{{exercise.rest}}</td>
+            <td>
+              <a [href]="exercise.ejercicio2.link" target="_blank">{{exercise.ejercicio2.name}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+
+
+  <!-- <div class="container" *ngFor="let workout of workoutDetails"> -->
+
+
+
+    <!-- <h2>{{ workoutDetails?.name }} de {{ workoutDetails?.user }}</h2>
+    
+    <div *ngFor="let detail of workoutDetails?.workouts">
+      <table class="workout-table">
+        <thead>
+          <tr>
+            <th colspan="2">Ejercicio 1</th>
+            <th>Iniciar stopper</th>
+            <th>Ejercicio 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exercise of detail.exerciseDetails; let i = index">
+            <td>{{ detail.series }}x{{ exercise.repeticiones }}</td>
+            <td>
+              <a [href]="exercise.exercise.link" target="_blank">{{ exercise.exercise.name }}</a>
+            </td>
+            <td class="rest-time" *ngIf="i % 2 === 0" rowspan="2">{{ exercise.rest }}</td>
+            <td *ngIf="detail.exerciseDetails.length > 1">
+              <a [href]="detail.exerciseDetails[i + 1]?.exercise?.link" target="_blank">
+                {{ detail.exerciseDetails[i + 1]?.exercise?.name }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+
+
+
+    <!-- <div class="container" *ngIf="workoutDetails">
+      <h2>{{ workoutDetails?.name }} de {{ workoutDetails?.user }}</h2>
+      
+      <div *ngFor="let detail of workoutDetails?.workouts">
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th colspan="2">Ejercicio 1</th>
+              <th>Iniciar stopper</th>
+              <th>Ejercicio 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Bucle que avanza de dos en dos 
+            <tr *ngFor="let i of detail.exerciseDetails; let index = index">
+              <td>{{ detail.series }}x{{ detail.exerciseDetails[index].repeticiones }}</td>
+              <td>
+                <a [href]="detail.exerciseDetails[index].exercise.link" target="_blank">
+                  {{ detail.exerciseDetails[index].exercise.name }}
+                </a>
+              </td>
+              <!-- Mostrar tiempo de descanso una vez por par 
+              <td class="rest-time">{{ detail.exerciseDetails[index].rest }}</td>
+              <td *ngIf="detail.exerciseDetails.length > index + 1">
+                <a [href]="detail.exerciseDetails[index + 1]?.exercise?.link" target="_blank">
+                  {{ detail.exerciseDetails[index + 1]?.exercise?.name }}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+
+
+    <div class="container" *ngIf="workoutDetails">
+      <h2>{{ workoutDetails?.name }} de {{ workoutDetails?.user }}</h2>
+      
+      <div *ngFor="let detail of workoutDetails?.workouts">
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th colspan="2">Ejercicio 1</th>
+              <th>Iniciar stopper</th>
+              <th>Ejercicio 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Usamos la función getExerciseIndices para iterar sobre los pares -->
+            <tr *ngFor="let i of getExerciseIndices(detail.exerciseDetails)">
+              <td>{{ detail.series }}x{{ detail.exerciseDetails[i].repeticiones }}</td>
+              <td>
+                <a [href]="detail.exerciseDetails[i].exercise.link" target="_blank">
+                  {{ detail.exerciseDetails[i].exercise.name }}
+                </a>
+              </td>
+              <td class="rest-time">{{ detail.exerciseDetails[i].rest }}</td>
+              <td *ngIf="detail.exerciseDetails.length > i + 1">
+                <a [href]="detail.exerciseDetails[i + 1]?.exercise?.link" target="_blank">
+                  {{ detail.exerciseDetails[i + 1]?.exercise?.name }}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

@@ -1,0 +1,147 @@
+{
+  "workoutList": [
+    {
+      "id": "1",
+      "user": "aaron",
+      "name": "miTabla1",
+      "workouts": [
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e1",
+                "name": "Elevaciones",
+                "link": "https://www.youtube.com/shorts/SBAAdAoo8NM"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            },
+            {
+              "exercise": {
+                "id": "e2",
+                "name": "Jalón al pecho sentado",
+                "link": "https://www.youtube.com/watch?v=Wvgr1s0SlwQ"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            }
+          ]
+        },
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e3",
+                "name": "Aperturas",
+                "link": "https://www.youtube.com/watch?v=9sqUAJqpm7w"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            },
+            {
+              "exercise": {
+                "id": "e4",
+                "name": "Remo pisando cinta",
+                "link": "https://www.youtube.com/shorts/5fas_DRGqF0"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            }
+          ]
+        },
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e5",
+                "name": "Press Banca",
+                "link": "https://www.youtube.com/watch?v=3HyvtSrJSLk"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            },
+            {
+              "exercise": {
+                "id": "e6",
+                "name": "Peso muerto",
+                "link": "https://www.youtube.com/shorts/VLW-vK6ZF94"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            }
+          ]
+        },
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e7",
+                "name": "2xMartillo&Curlx2",
+                "link": "https://www.youtube.com/watch?v=4lbIb30SB2U"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            },
+            {
+              "exercise": {
+                "id": "e8",
+                "name": "Triceps",
+                "link": "https://www.youtube.com/shorts/Im9BTp8s2pU"
+              },
+              "repeticiones": "10",
+              "rest": "2min 30sec"
+            }
+          ]
+        },
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e9",
+                "name": "Flexiones",
+                "link": "https://www.youtube.com/watch?v=wJVbel88lMI"
+              },
+              "repeticiones": "10",
+              "rest": "2min"
+            },
+            {
+              "exercise": {
+                "id": "e10",
+                "name": "Dominadas/Remo unilateral",
+                "link": "https://www.youtube.com/watch?v=oOrMOL3FMCw"
+              },
+              "repeticiones": "Al fallo",
+              "rest": "2min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "user": "aaron",
+      "name": "miTabla2",
+      "workouts": [
+        {
+          "series": "4",
+          "exerciseDetails": [
+            {
+              "exercise": {
+                "id": "e1",
+                "name": "Elevaciones",
+                "link": "https://www.youtube.com/shorts/SBAAdAoo8NM"
+              },
+              "repeticiones": "15",
+              "rest": "3min"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

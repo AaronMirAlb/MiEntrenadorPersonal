@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Lista de Entrenamientos</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Tabla</th>
+          <!-- <th>Ejercicio 1</th>
+          <th>Ejercicio 2</th>
+          <th>Descanso</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workout of workoutList">
+          <td>{{ workout.user }}</td>
+          <td><a [routerLink]="['/workout-details', workout.id]">{{ workout.name }}</a></td>
+<!--           
+          <td><a class="nav-link" [routerLink]="'workouts/'"{{ workout.id }}  href="#">{{ workout.id }}</a></td>
+          <td>
+          </td>
+          <td>
+            <a [routerLink]="['/workout-details', workout.exercise2]">{{ getExerciseName(workout.exercise2) }}</a>
+          </td>
+          <td>{{ workout.rest }}</td> -->
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-danger">hola</button>
